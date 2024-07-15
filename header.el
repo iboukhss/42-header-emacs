@@ -32,7 +32,7 @@
 (setq write-file-hooks (cons 'header-update write-file-hooks))
 
 
-(set 'user-login (let ((login (getenv "USER")))
+(set 'user-login (let ((login (getenv "FT_USER")))
 				   (if (string= login nil)
 					   "marvin"
 					 login)
@@ -40,7 +40,7 @@
 	 )
 
 
-(set 'user-mail (let ((mail (getenv "MAIL")))
+(set 'user-mail (let ((mail (getenv "FT_MAIL")))
 				   (if (string= mail nil)
 					   "marvin@42.fr"
 					 mail)
